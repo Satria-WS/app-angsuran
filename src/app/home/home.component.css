@@ -1,0 +1,32 @@
+/* @import 'highlight.js/styles/github.css'; */
+
+input[type='number'] {
+  background: transparent;
+  border-radius: 6px;
+  border: 1px solid var(--Light-Grayscale-90, #E2E2E2);
+  padding-left: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  width: 100%;
+}
+
+label {
+  padding-top: 5%;
+  padding-bottom: 2%;
+  display: block;
+}
+
+button {
+  border-radius: 4px;
+  background: #0A0B0D;
+}
+
+pre {
+  background: #f5f5f5;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.hljs {
+  background-color: #fff !important;
+}

@@ -1,0 +1,86 @@
+[debug] [2024-10-11T01:22:38.987Z] ----------------------------------------------------------------------
+[debug] [2024-10-11T01:22:38.990Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --debug
+[debug] [2024-10-11T01:22:38.991Z] CLI Version:   13.16.0
+[debug] [2024-10-11T01:22:38.991Z] Platform:      win32
+[debug] [2024-10-11T01:22:38.991Z] Node Version:  v20.10.0
+[debug] [2024-10-11T01:22:38.991Z] Time:          Fri Oct 11 2024 08:22:38 GMT+0700 (Western Indonesia Time)
+[debug] [2024-10-11T01:22:38.992Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-11T01:22:39.089Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-11T01:22:39.090Z] > authorizing via signed-in user (extencezone02@gmail.com)
+[debug] [2024-10-11T01:22:39.091Z] [iam] checking project angular-test-76fc6 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-10-11T01:22:39.094Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/angular-test-76fc6:testIamPermissions [none]
+[debug] [2024-10-11T01:22:39.095Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/angular-test-76fc6:testIamPermissions x-goog-quota-user=projects/angular-test-76fc6
+[debug] [2024-10-11T01:22:39.096Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/angular-test-76fc6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-10-11T01:22:40.239Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/angular-test-76fc6:testIamPermissions 200
+[debug] [2024-10-11T01:22:40.240Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/angular-test-76fc6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-10-11T01:22:40.242Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/angular-test-76fc6 [none]
+[debug] [2024-10-11T01:22:40.831Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/angular-test-76fc6 200
+[debug] [2024-10-11T01:22:40.832Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/angular-test-76fc6 {"projectId":"angular-test-76fc6","projectNumber":"953423033439","displayName":"Angular-Test","name":"projects/angular-test-76fc6","resources":{"hostingSite":"angular-test-76fc6"},"state":"ACTIVE","etag":"1_b1538b1a-de60-4698-9cfe-83cf8512a129"}
+[info] 
+[info] === Deploying to 'angular-test-76fc6'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-10-11T01:22:40.839Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-test-76fc6/versions [none]
+[debug] [2024-10-11T01:22:40.840Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-test-76fc6/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-10-11T01:22:41.769Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-test-76fc6/versions 200
+[debug] [2024-10-11T01:22:41.770Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-test-76fc6/versions {"name":"projects/953423033439/sites/angular-test-76fc6/versions/70513cb2e5ff18fe","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[angular-test-76fc6]: beginning deploy... 
+[info] i  hosting[angular-test-76fc6]: found 8 files in dist/app-angsuran/browser 
+[debug] [2024-10-11T01:22:41.787Z] [hosting] uploading with 200 concurrency
+[debug] [2024-10-11T01:22:41.899Z] [hosting] hash cache [ZGlzdFxhcHAtYW5nc3VyYW5cYnJvd3Nlcg] stored for 8 files
+[debug] [2024-10-11T01:22:41.900Z] [hosting][hash queue][FINAL] {"max":104,"min":1,"avg":21.75,"active":0,"complete":8,"success":8,"errored":0,"retried":0,"total":8,"elapsed":111}
+[debug] [2024-10-11T01:22:41.901Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/953423033439/sites/angular-test-76fc6/versions/70513cb2e5ff18fe:populateFiles [none]
+[debug] [2024-10-11T01:22:41.902Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/953423033439/sites/angular-test-76fc6/versions/70513cb2e5ff18fe:populateFiles {"files":{"/favicon.ico":"a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912","/styles-HPR2I2NH.css":"2bdd15a25ce69d82ac3758f26676aac4bae5c05253a180de064fcf206a96edeb","/main-CXFEL6TK.css":"763d9e0ac92afad4399d14f3aefd0933a7c6efe9d839fa95f16c0ae94cacedea","/index.html":"16198e2a2dfa2f557dd13df061a3711efce8924c025b8498c2c3ff1995522cf8","/polyfills-FFHMD2TL.js":"736494ba509ebe13a13ff57f0d4921ecfd9eb2ac4e8efe5d5fc1704b4b1d9b35","/chunk-5FZOKLP6.js":"b86382867bcf3b55e7e8849aa68b5035a32de0623d9e49b656b1b4388374a914","/main-V6Q2ODSJ.js":"87177aa98d492a338ca9604ca2d43356785c5bffd99d614c4f7ae48e033d58f2","/chunk-FZLFFQPG.js":"240ffd05e3b6ed9c7f575c7d39c413dfed5c5dac2703290713cdce91b8f74aeb"}}
+[debug] [2024-10-11T01:22:42.336Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/953423033439/sites/angular-test-76fc6/versions/70513cb2e5ff18fe:populateFiles 200
+[debug] [2024-10-11T01:22:42.336Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/953423033439/sites/angular-test-76fc6/versions/70513cb2e5ff18fe:populateFiles {"uploadRequiredHashes":["87177aa98d492a338ca9604ca2d43356785c5bffd99d614c4f7ae48e033d58f2","2bdd15a25ce69d82ac3758f26676aac4bae5c05253a180de064fcf206a96edeb","16198e2a2dfa2f557dd13df061a3711efce8924c025b8498c2c3ff1995522cf8"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/angular-test-76fc6/versions/70513cb2e5ff18fe/files"}
+[debug] [2024-10-11T01:22:42.339Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-test-76fc6/versions/70513cb2e5ff18fe/files/87177aa98d492a338ca9604ca2d43356785c5bffd99d614c4f7ae48e033d58f2 [none]
+[debug] [2024-10-11T01:22:42.340Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-test-76fc6/versions/70513cb2e5ff18fe/files/87177aa98d492a338ca9604ca2d43356785c5bffd99d614c4f7ae48e033d58f2 [stream]
+[debug] [2024-10-11T01:22:42.342Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-test-76fc6/versions/70513cb2e5ff18fe/files/2bdd15a25ce69d82ac3758f26676aac4bae5c05253a180de064fcf206a96edeb [none]
+[debug] [2024-10-11T01:22:42.342Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-test-76fc6/versions/70513cb2e5ff18fe/files/2bdd15a25ce69d82ac3758f26676aac4bae5c05253a180de064fcf206a96edeb [stream]
+[debug] [2024-10-11T01:22:42.344Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-test-76fc6/versions/70513cb2e5ff18fe/files/16198e2a2dfa2f557dd13df061a3711efce8924c025b8498c2c3ff1995522cf8 [none]
+[debug] [2024-10-11T01:22:42.346Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-test-76fc6/versions/70513cb2e5ff18fe/files/16198e2a2dfa2f557dd13df061a3711efce8924c025b8498c2c3ff1995522cf8 [stream]
+[debug] [2024-10-11T01:22:42.349Z] [hosting][populate queue][FINAL] {"max":441,"min":441,"avg":441,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":451}
+[debug] [2024-10-11T01:22:42.351Z] [hosting] uploads queued: 3
+[debug] [2024-10-11T01:22:43.577Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-test-76fc6/versions/70513cb2e5ff18fe/files/87177aa98d492a338ca9604ca2d43356785c5bffd99d614c4f7ae48e033d58f2 200
+[debug] [2024-10-11T01:22:43.579Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-test-76fc6/versions/70513cb2e5ff18fe/files/87177aa98d492a338ca9604ca2d43356785c5bffd99d614c4f7ae48e033d58f2 [stream]
+[debug] [2024-10-11T01:22:43.614Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-test-76fc6/versions/70513cb2e5ff18fe/files/16198e2a2dfa2f557dd13df061a3711efce8924c025b8498c2c3ff1995522cf8 200
+[debug] [2024-10-11T01:22:43.615Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-test-76fc6/versions/70513cb2e5ff18fe/files/16198e2a2dfa2f557dd13df061a3711efce8924c025b8498c2c3ff1995522cf8 [stream]
+[info] i  hosting: uploading new files [2/3] (66%) 
+[debug] [2024-10-11T01:22:43.830Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-test-76fc6/versions/70513cb2e5ff18fe/files/2bdd15a25ce69d82ac3758f26676aac4bae5c05253a180de064fcf206a96edeb 200
+[debug] [2024-10-11T01:22:43.831Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-test-76fc6/versions/70513cb2e5ff18fe/files/2bdd15a25ce69d82ac3758f26676aac4bae5c05253a180de064fcf206a96edeb [stream]
+[debug] [2024-10-11T01:22:43.833Z] [hosting][upload queue][FINAL] {"max":1494,"min":1244,"avg":1339,"active":0,"complete":3,"success":3,"errored":0,"retried":0,"total":3,"elapsed":1496}
+[info] i  hosting: upload complete 
+[info] +  hosting[angular-test-76fc6]: file upload complete 
+[debug] [2024-10-11T01:22:43.836Z] [hosting] deploy completed after 2063ms
+[debug] [2024-10-11T01:22:43.837Z] [
+  {
+    "config": {
+      "public": "dist/app-angsuran/browser",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "angular-test-76fc6"
+    },
+    "version": "projects/953423033439/sites/angular-test-76fc6/versions/70513cb2e5ff18fe"
+  }
+]
+[info] i  hosting[angular-test-76fc6]: finalizing version... 
+[debug] [2024-10-11T01:22:43.846Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-test-76fc6/versions/70513cb2e5ff18fe updateMask=status%2Cconfig
+[debug] [2024-10-11T01:22:43.846Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-test-76fc6/versions/70513cb2e5ff18fe {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2024-10-11T01:22:44.310Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-test-76fc6/versions/70513cb2e5ff18fe 200
+[debug] [2024-10-11T01:22:44.311Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-test-76fc6/versions/70513cb2e5ff18fe {"name":"projects/953423033439/sites/angular-test-76fc6/versions/70513cb2e5ff18fe","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-10-11T01:22:42.074947Z","createUser":{"email":"extencezone02@gmail.com"},"finalizeTime":"2024-10-11T01:22:44.888587Z","finalizeUser":{"email":"extencezone02@gmail.com"}}
+[debug] [2024-10-11T01:22:44.313Z] [hosting] finalized version for angular-test-76fc6:[object Object]
+[info] +  hosting[angular-test-76fc6]: version finalized 
+[info] i  hosting[angular-test-76fc6]: releasing new version... 
+[debug] [2024-10-11T01:22:44.317Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-test-76fc6/channels/live/releases versionName=projects%2F953423033439%2Fsites%2Fangular-test-76fc6%2Fversions%2F70513cb2e5ff18fe
+[debug] [2024-10-11T01:22:44.319Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-test-76fc6/channels/live/releases {}
+[debug] [2024-10-11T01:22:44.802Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-test-76fc6/channels/live/releases 200

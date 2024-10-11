@@ -1,0 +1,68 @@
+<div class="flex justify-evenly items-center ">
+  <div class=" border border-zinc-700 bg-[#FFF] p-10 w-full max-w-[30%] h-full  ">
+    <h3 class="text-xl font-bold ">Angsuran Payment!</h3>
+    <form [formGroup]="angsuranForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label class="" for="price">Harga Mobil* (Rp)</label>
+        <input [maxlength]="10" formControlName="price" type="number" alt="Harga barang" id="price" min="0" required />
+
+      </div>
+      <div *ngIf="angsuranForm.get('price').invalid && formSubmitted">
+        <small
+        *ngIf="angsuranForm.get('price').errors?.['required']"
+          class="text-red-500"
+          >Kolom Harga tidak boleh kosong
+        </small >
+      </div>
+      <div>
+        <label for="dp">Down Payment* (%)</label>
+        <input  [maxlength]="3" formControlName="downPayment" type="number" alt="Down Payment" id="dp" min="0" max="100"  />
+      </div>
+      <div *ngIf="angsuranForm.get('downPayment').invalid && formSubmitted">
+        <small
+        *ngIf="angsuranForm.get('downPayment').errors?.['required']"
+          class="text-red-500"
+          >Kolom dp tidak boleh kosong
+        </small >
+      </div>
+      <div>
+        <label for="jangka">Jangka Waktu* (bulan)</label>
+        <input  [maxlength]="2" formControlName="timePeriod" type="number" alt="Jangka Waktu" id="jangka" min="1" max="12" />
+      </div>
+      <div *ngIf="angsuranForm.get('price').invalid && formSubmitted">
+        <small
+        *ngIf="angsuranForm.get('price').errors?.['required']"
+          class="text-red-500"
+          >Kolom Jangka Waktu tidak boleh kosong
+        </small >
+      </div>
+      <div class="pt-10">
+        <button class="text-white w-full p-2 hover:shadow-2xl">Calculate</button>
+      </div>
+    </form>
+    <div class="py-2">
+      <p><strong>Pokok Utang:</strong></p>
+      <p><var>P</var> = <var>OTR</var> - <var>DP</var></p>
+  </div>
+
+  <div class="py-2">
+      <p><strong>Angsuran Per Bulan:</strong></p>
+      <p><var>A</var> = (<var>P</var> + (<var>P</var> * <var>bunga</var>)) / <var>Jangka_Waktu</var></p>
+  </div>
+  <div>
+    <p><strong>Hasil: </strong>  {{ angsuranBulanan  | currency:'Rp ':'symbol':'1.2-2' }} </p>
+  </div>
+
+    <!-- <pre><code [highlight]="code" language="html"></code></pre> -->
+  </div>
+  <div>
+    <pre>
+      <code [highlightAuto]="codeForHighlight"
+            language="ts"
+            lineNumbers>
+
+          </code>
+    </pre>
+  </div>
+</div>
+
